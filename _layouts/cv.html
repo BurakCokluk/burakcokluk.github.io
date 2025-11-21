@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    {% include header.html %}
+    <main>
+      <div class="page-content">
+        <h1>{{ page.title }}</h1>
+        
+        {% if site.data.cv %}
+          {% for section in site.data.cv %}
+            <div class="cv-section">
+              <h2>{{ section.title }}</h2>
+              
+              {% if section.type == "text" %}
+                <p>{{ section.contents }}</p>
+              
+              {% elsif section.type == "map" %}
+                <dl>
+                  {% for item in section.contents %}
+                    <dt><strong>{{ item.name }}:</strong></dt>
+                    <dd>{{ item.value }}</dd>
+                  {% endfor %}
+                </dl>
+              
+              {% else %}
+                {% for item in section.contents %}
+                  {% if item.items %}
+                    <h4>{{ item.title }}</h4>
+                    <ul>
+                      {% for subitem in item.items %}
+                        <li>{{ subitem }}</li>
+                      {% endfor %}
+                    </ul>
+                  {% elsif item.title %}
+                    <h4>{{ item.title }}</h4>
+                    {% if item.institution %}
+                      <p><em>{{ item.institution }}, {{ item.year }}</em></p>
+                    {% endif %}
+                    {% if item.description %}
+                      <ul>
+                      {% for desc in item.description %}
+                        <li>{{ desc }}</li>
+                      {% endfor %}
+                      </ul>
+                    {% endif %}
+                    {% if item.highlights %}
+                      <ul>
+                        {% for highlight in item.highlights %}
+                          <li>{{ highlight }}</li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+            </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+    </main>
+    {% include footer.html %}
+  </body>
+</html>

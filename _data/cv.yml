@@ -1,0 +1,263 @@
+- title: General Information
+  type: map
+  contents:
+    - name: Full Name
+      value: Burak Çokluk
+    - name: Location
+      value: Istanbul, Turkey
+    - name: Title
+      value: System & Network Engineer
+    - name: Email
+      value: burak@example.com
+    - name: LinkedIn
+      value: linkedin.com/in/burakcokluk
+    - name: GitHub
+      value: github.com/burakcokluk
+
+- title: Summary
+  type: text
+  contents: |
+    Experienced System & Network Engineer with 10+ years in enterprise infrastructure, 
+    high-availability architectures, monitoring platforms, and DevOps automation. 
+    Expertise in VMware virtualization, Linux/Windows administration, Zabbix/Grafana monitoring,
+    and modern cloud technologies. Passionate about building scalable, observable, and secure systems.
+    Also actively involved in AI projects, fintech automation, and Web3 infrastructure development.
+
+- title: Experience
+  type: list
+  contents:
+    - title: Senior System & Network Engineer
+      institution: Enterprise Financial Services (Istanbul)
+      year: 2019 - Present
+      description:
+        - Architected and managed multi-site VMware vSphere clusters (50+ VMs) across 2 data centers
+        - Designed high-availability infrastructure supporting 3DC + 2DR + passive environment
+        - Implemented centralized monitoring stack (Zabbix, Grafana, ELK, QRadar SIEM)
+        - Reduced system downtime by 60% through automated health checks and alerting
+        - Led deployment of AppMan platform (company-wide CI/CD tool) serving 100+ releases/week
+        - Managed payment system infrastructure with PCI-DSS compliance
+        - Mentored 5+ junior engineers on infrastructure best practices
+        - Achievements; 99.95% uptime SLA, MTTR reduced to 8 minutes, zero security incidents
+
+    - title: System Engineer
+      institution: Energy Infrastructure Company (Ankara)
+      year: 2015 - 2019
+      description:
+        - Managed Windows Server and Linux infrastructure for power generation facilities
+        - Implemented backup and disaster recovery strategies (NetApp SnapVault)
+        - Configured and maintained Cisco firewalls and network devices
+        - Deployed monitoring with Zabbix for 100+ critical systems
+        - Responded to 24/7 on-call incidents with <2hr resolution time
+        - Worked with SCADA systems for industrial control environments
+
+    - title: Junior Network Administrator
+      institution: Telecommunications Company (Istanbul)
+      year: 2013 - 2015
+      description:
+        - Configured and maintained enterprise network infrastructure
+        - Supported Windows Active Directory domain services
+        - Assisted with VPN and remote access implementations
+        - Gained foundational knowledge in DNS, DHCP, and routing protocols
+
+- title: Education
+  type: list
+  contents:
+    - title: B.Sc. Electrical & Electronics Engineering
+      institution: Istanbul Technical University
+      year: 2009 - 2013
+      description: 
+        - Focus on control systems and industrial electronics
+        - Relevant coursework; Automation, Control Theory, Industrial Networks
+
+    - title: Professional Certifications
+      institution: Multiple Institutions
+      year: 2014 - Present
+      description:
+        - CompTIA Security+
+        - VMware Certified Associate (VCA) - Data Center Virtualization
+        - Zabbix Certified Specialist
+        - AWS Certified Cloud Practitioner (in progress)
+
+- title: Technical Skills
+  type: nested_list
+  contents:
+    - title: Infrastructure & Virtualization
+      items:
+        - VMware vSphere, ESXi cluster management and HA/DR
+        - Windows Server (2012 R2, 2016, 2019, 2022)
+        - Linux Administration (Ubuntu, CentOS, Debian)
+        - Active Directory, Group Policy, DNS, DHCP
+        - Backup solutions (NetApp, Veeam, Commvault)
+
+    - title: Networking
+      items:
+        - VLAN, OSPF, BGP routing protocols
+        - Firewalls (Fortinet FortiGate, Cisco ASA)
+        - VPN, IPSec, SSL-VPN configuration
+        - Network design and optimization
+        - Load balancing and reverse proxy (Nginx, HAProxy)
+
+    - title: Monitoring & Observability
+      items:
+        - Zabbix (advanced templates, custom triggers, alerting)
+        - Grafana dashboards and data source integration
+        - Prometheus and exporters
+        - ELK Stack (Elasticsearch, Logstash, Kibana)
+        - QRadar SIEM
+        - SolarWinds Network Monitoring
+
+    - title: DevOps & Automation
+      items:
+        - Docker containerization and Docker Compose
+        - Kubernetes basics and cluster operations
+        - GitHub Actions CI/CD pipelines
+        - Python scripting for automation
+        - Shell scripting (Bash, Zsh)
+        - Terraform for infrastructure-as-code
+        - Internal AppMan deployment platform
+
+    - title: Programming Languages
+      items:
+        - Python (FastAPI, Flask, automation)
+        - Node.js (backend and web3.js)
+        - Bash/Shell scripting
+        - JavaScript/TypeScript (intermediate)
+        - Solidity (smart contracts, beginner-intermediate)
+
+    - title: Databases
+      items:
+        - PostgreSQL (complex queries, optimization)
+        - MySQL/MariaDB
+        - MongoDB (NoSQL)
+        - Redis (caching and sessions)
+        - Elasticsearch (full-text search)
+
+    - title: Cloud & Web3
+      items:
+        - AWS basics (EC2, S3, Lambda)
+        - Yandex Cloud
+        - XRPL (Ripple) blockchain integration
+        - Solana dApp development
+        - Ethereum smart contracts and Web3.js
+
+    - title: Tools & Platforms
+      items:
+        - Git/GitHub version control
+        - Visual Studio Code, PyCharm, Hardhat
+        - Jenkins CI/CD
+        - Stripe payment integration
+        - Jira, Confluence for documentation
+
+- title: Projects & Achievements
+  type: list
+  contents:
+    - title: TradeInsight AI
+      year: 2024
+      description: Machine learning trading signal platform with 75%+ accuracy. FastAPI backend, TensorFlow models, real-time alerts.
+      highlights:
+        - 2000+ active traders using platform
+        - 76% average signal accuracy
+        - <500ms response time per analysis
+        - Built end-to-end pipeline from data ingestion to signal distribution
+
+    - title: HabitCoach
+      year: 2023 - 2024
+      description: AI-powered habit tracking with behavioral science. React frontend, FastAPI backend, ML-based scoring.
+      highlights:
+        - 5000+ active users in beta
+        - 68% average habit completion rate
+        - 4.2/5.0 app store rating
+        - Implemented adaptive scoring algorithms
+
+    - title: IMA - AI Mental Coach
+      year: 2023 - 2024
+      description: Conversational AI mental health coach using GPT-4 and WebSocket real-time chat.
+      highlights:
+        - 3000+ sessions per month
+        - 18-minute average session duration
+        - Integrated emotion detection and crisis escalation
+        - Privacy-first with end-to-end encryption
+
+    - title: Internal AppMan Deployment Platform
+      year: 2020 - Present
+      description: Enterprise-wide deployment automation platform. Python orchestration, Kubernetes, GitHub integration.
+      highlights:
+        - 100+ deployments per week with 99.8% success rate
+        - Reduced deployment time from 2 hours to 12 minutes
+        - 100% zero-downtime releases
+        - Trained 50+ engineers on platform usage
+
+    - title: Zabbix + Grafana Observability Stack
+      year: 2019 - Present
+      description: Enterprise monitoring for 200+ servers across 3 data centers.
+      highlights:
+        - 200+ custom dashboards
+        - MTTR reduced from 45 min to 8 min
+        - 99.5% infrastructure visibility
+        - On-call burden reduced by 50%
+
+    - title: Ripple-Based Payment Platform
+      year: 2022 - 2023
+      description: Real-time international payment settlement on XRPL. FastAPI backend, PCI-DSS compliant.
+      highlights:
+        - 5000+ daily transactions processed
+        - 99.9% settlement success rate
+        - Cost per transaction reduced to $0.002 (vs $3-5 SWIFT)
+        - $2M annual savings for partner banks
+
+    - title: Solana dApp - Token Launchpad
+      year: 2023
+      description: No-code token creation and management on Solana blockchain.
+      highlights:
+        - 1200+ tokens launched
+        - $50M+ total liquidity managed
+        - 15K+ active monthly users
+        - Zero critical security incidents
+
+    - title: Selenium E-Commerce Analyzer
+      year: 2022 - 2023
+      description: Web scraping automation for competitive intelligence. Python, Selenium, Pandas.
+      highlights:
+        - 500+ products monitored in real-time
+        - 99.2% data accuracy
+        - 5000 products scraped per hour
+        - $500/month cost savings vs commercial tools
+
+    - title: FastAPI E-Commerce Backend
+      year: 2021 - Present
+      description: Full-stack e-commerce with Stripe payments, recommendations, and admin dashboard.
+      highlights:
+        - 50K+ monthly active users
+        - $5M+ annual GMV
+        - 99.95% uptime SLA
+        - 3.2% conversion rate (vs 2.1% industry average)
+
+    - title: Web3 Token Infrastructure
+      year: 2023 - Present
+      description: Multi-chain token deployment toolkit with security audits and automation.
+      highlights:
+        - 50+ tokens deployed using infrastructure
+        - $200M+ market cap across tokens
+        - Zero critical security incidents
+        - Deployment time reduced from 2 weeks to 2 days
+
+- title: Languages
+  type: list
+  contents:
+    - Turkish (Native)
+    - English (Fluent)
+    - German (Beginner)
+
+- title: Additional Interests
+  type: list
+  contents:
+    - Artificial Intelligence and Machine Learning applications in DevOps
+    - Web3 and blockchain technology
+    - Open source contributions
+    - Technical mentoring and knowledge sharing
+    - System architecture and scalability challenges
+
+- title: References
+  type: text
+  contents: |
+    Available upon request

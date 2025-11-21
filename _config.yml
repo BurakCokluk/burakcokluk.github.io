@@ -1,0 +1,117 @@
+# Site configuration
+# ==============================================
+
+# Site settings
+# jekyll-seo-tag will begin parsing pages/posts starting with these front matter variables
+# https://github.com/jekyll/jekyll-seo-tag
+
+title: Burak Çokluk
+first_name: Burak
+last_name: Çokluk
+email: burak@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  A personal portfolio showcasing my experience in system engineering, DevOps,
+  AI projects, and Web3 infrastructure development.
+footer_text: >
+  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
+
+url: https://burakcokluk.com # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog/my-site
+last_updated: true # set to true if you want to display last updated in the footer
+
+# Social integration
+# ==============================================
+# Your social media handles
+github_username: burakcokluk
+linkedin_username: burakcokluk
+twitter_username: # leave blank if you don't have any!
+
+# Blog settings
+# ==============================================
+blog_name: Technical Blog
+blog_description: Insights on systems engineering, DevOps, AI, and Web3
+
+paginate: 10 # number of posts to include on blog page
+paginate_path: "/blog/page:num/"
+
+# Jekyll collections
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+# Jekyll Markdown rendering
+# ==============================================
+markdown: kramdown
+highlighter: rouge
+highlight_theme: github
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    css_class: highlight
+
+# Jekyll settings
+# ==============================================
+exclude:
+  - bin
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .jekyll-cache
+  - .sass-cache/
+  - .DS_Store
+
+keep_files:
+  - .git
+  - .gitignore
+  - .nojekyll
+
+# Plugins
+# ==============================================
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Scholar Bibliography Settings
+# Instrument used to open PDF/HTML
+scholar:
+  style: apa
+
+# Optional Features
+# ==============================================
+enable_google_analytics: false
+enable_darkmode: true
+enable_navbar_social: false
+
+# Display order of navigation items
+nav_order:
+  - about
+  - projects
+  - blog
+  - skills
+  - tools
+  - ai-projects
+  - resume
+  - contact
+
+# ==============================================
+# Theme Settings
+# ==============================================
+
+# Color scheme (light, dark, auto)
+color-scheme: auto
+
+# Primary brand color
+brand_color: "#0066cc"
+
+# Font settings
+font-family: "Segoe UI, Tahoma, Geneva, Verdana, sans-serif"
+
+# Layout settings
+max_width: 900px

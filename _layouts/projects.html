@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    {% include header.html %}
+    <main>
+      <div class="page-content">
+        <h1>Projects</h1>
+        {% if site.projects %}
+          <div class="projects-grid">
+            {% for project in site.projects %}
+              <div class="project-card">
+                <h3><a href="{{ project.url }}">{{ project.title }}</a></h3>
+                {% if project.category %}
+                  <p class="project-category">{{ project.category }}</p>
+                {% endif %}
+                <p>{{ project.excerpt }}</p>
+                <a href="{{ project.url }}">View project</a>
+              </div>
+            {% endfor %}
+          </div>
+        {% else %}
+          <p>No projects yet.</p>
+        {% endif %}
+      </div>
+    </main>
+    {% include footer.html %}
+  </body>
+</html>

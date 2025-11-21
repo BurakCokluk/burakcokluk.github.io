@@ -1,0 +1,40 @@
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+Gemfile.lock
+
+# Ruby
+vendor/
+.bundle/
+*.gem
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build
+dist/
+build/
+
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Temporary
+tmp/
+temp/
+*.log
