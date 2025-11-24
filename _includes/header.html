@@ -2,12 +2,16 @@
 <!-- Placed in _includes/header.html for al-folio theme -->
 
 <header id="header" class="portfolio-header">
-  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="navbar">
     <div class="container">
       <!-- Logo/Brand -->
       <a class="navbar-brand" href="/">
         <div class="brand-container">
-          <img src="/assets/img/logo.png" alt="Burak Cokluk" class="brand-logo" />
+          <!-- Prefer SVG logo (crisp) with PNG fallback for older browsers -->
+          <picture>
+            <source srcset="/assets/img/logo.svg" type="image/svg+xml">
+            <img src="/assets/img/logo.png" alt="Burak Cokluk" class="brand-logo" />
+          </picture>
           <span class="brand-text">Burak Çokluk</span>
         </div>
       </a>
@@ -68,3 +72,24 @@
     </div>
   </nav>
 </header>
+
+<!-- Navbar Scroll Effect Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const navbar = document.getElementById('navbar');
+    const header = document.getElementById('header');
+    const checkScroll = function() {
+      const y = window.scrollY || window.pageYOffset;
+      if (y > 20) {
+        navbar.classList.add('navbar-scrolled');
+        header.classList.add('header-scrolled');
+      } else {
+        navbar.classList.remove('navbar-scrolled');
+        header.classList.remove('header-scrolled');
+      }
+    };
+    // run on load in case page is already scrolled
+    checkScroll();
+    window.addEventListener('scroll', checkScroll, { passive: true });
+  });
+</script>

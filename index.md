@@ -4,18 +4,83 @@ title: Home
 permalink: /
 ---
 
-# Welcome to My Portfolio
+<section class="hero-section">
+  <!-- Animated Node Cluster Background -->
+  <div id="particles-js" class="particles-background"></div>
+  
+  <div class="container page-hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1>Hi — I'm Burak Çokluk.</h1>
+        <h3>System & Network Engineer — DevOps, Infrastructure, AI</h3>
+        <p class="hero-lead">I build resilient infrastructure, automation pipelines and scalable systems for production.</p>
+        <p>
+          <a href="/contact/" class="cta-button" aria-label="Get started — contact Burak Çokluk">
+            Get Started
+            <span class="btn-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false" role="img">
+                <path d="M5 12h14M13 5l7 7-7 7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
+          <a href="/projects/" class="btn-cta" aria-label="See projects" style="margin-left:12px">See Projects</a>
+        </p>
+      </div>
+      <div class="hero-art">
+        <img src="/assets/img/logo.svg" alt="Illustration" class="hero-illustration" />
+      </div>
+    </div>
+  </div>
+</section>
 
-I'm **Burak Çokluk**, a **System & Network Engineer** specializing in enterprise infrastructure, DevOps, and modern cloud technologies.
+---
 
 ## Quick Navigation
 
-- **[About Me](/about/)** — My background and expertise
-- **[Projects](/projects/)** — 10 Featured projects
-- **[Skills](/skills/)** — Technical capabilities
-- **[Blog](/blog/)** — Technical insights and articles
-- **[Resume](/resume/)** — Full CV
-- **[Contact](/contact/)** — Get in touch
+<div class="quick-nav-grid" markdown="0">
+  <a href="/about/" class="nav-card">
+    <div class="nav-card-icon">
+      <i class="fas fa-user"></i>
+    </div>
+    <h4>About Me</h4>
+    <p>My background and expertise</p>
+  </a>
+  <a href="/projects/" class="nav-card">
+    <div class="nav-card-icon">
+      <i class="fas fa-project-diagram"></i>
+    </div>
+    <h4>Projects</h4>
+    <p>10 Featured projects</p>
+  </a>
+  <a href="/skills/" class="nav-card">
+    <div class="nav-card-icon">
+      <i class="fas fa-tools"></i>
+    </div>
+    <h4>Skills</h4>
+    <p>Technical capabilities</p>
+  </a>
+  <a href="/blog/" class="nav-card">
+    <div class="nav-card-icon">
+      <i class="fas fa-blog"></i>
+    </div>
+    <h4>Blog</h4>
+    <p>Technical insights</p>
+  </a>
+  <a href="/resume/" class="nav-card">
+    <div class="nav-card-icon">
+      <i class="fas fa-file-alt"></i>
+    </div>
+    <h4>Resume</h4>
+    <p>Full CV & experience</p>
+  </a>
+  <a href="/contact/" class="nav-card">
+    <div class="nav-card-icon">
+      <i class="fas fa-envelope"></i>
+    </div>
+    <h4>Contact</h4>
+    <p>Get in touch</p>
+  </a>
+</div>
 
 ---
 

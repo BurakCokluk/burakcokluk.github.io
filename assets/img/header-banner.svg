@@ -1,27 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <!-- Clean, repeating pattern for header background. Small file, crisp on retina. -->
   <defs>
-    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0066cc;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#00a3e0;stop-opacity:1" />
+    <pattern id="dotlink" x="0" y="0" width="160" height="80" patternUnits="userSpaceOnUse">
+  <rect width="160" height="80" fill="#fbf7f3" />
+      <!-- three-node connector motif -->
+      <g transform="translate(20,12)" fill="none" stroke="#b08968" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.98">
+        <circle cx="8" cy="8" r="6" fill="#efe6dd" stroke="#d6b89a" stroke-width="0.9"/>
+        <circle cx="48" cy="8" r="6" fill="#efe6dd" stroke="#d6b89a" stroke-width="0.9"/>
+        <circle cx="28" cy="40" r="6" fill="#efe6dd" stroke="#d6b89a" stroke-width="0.9"/>
+        <path d="M14 12 L38 12 M32 14 L28 36" stroke="#b08968" stroke-width="1.6"/>
+      </g>
+      <!-- small accent dots -->
+  <circle cx="120" cy="60" r="3" fill="#e6d7c8" />
+  <circle cx="10" cy="60" r="2" fill="#e6d7c8" />
+    </pattern>
+
+    <!-- subtle linear gradient overlay for depth -->
+    <linearGradient id="overlay" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.98"/>
+      <stop offset="100%" stop-color="#f1f7fb" stop-opacity="0.98"/>
     </linearGradient>
   </defs>
-  
-  <!-- Background -->
-  <rect width="400" height="250" fill="#f8f9fa"/>
-  
-  <!-- Main title area -->
-  <text x="200" y="80" font-size="48" font-weight="bold" fill="url(#grad1)" text-anchor="middle" font-family="Arial, sans-serif">Burak Çokluk</text>
-  
-  <!-- Subtitle -->
-  <text x="200" y="130" font-size="24" fill="#666" text-anchor="middle" font-family="Arial, sans-serif">System & Network Engineer</text>
-  
-  <!-- Divider -->
-  <line x1="80" y1="150" x2="320" y2="150" stroke="#0066cc" stroke-width="2"/>
-  
-  <!-- Skills highlight -->
-  <text x="200" y="190" font-size="14" fill="#00a3e0" text-anchor="middle" font-family="Arial, sans-serif">DevOps | Infrastructure | AI | Web3</text>
-  
-  <!-- Corner accents -->
-  <circle cx="20" cy="20" r="4" fill="#ff6b35"/>
-  <circle cx="380" cy="230" r="4" fill="#ff6b35"/>
+
+  <!-- fill with repeating pattern -->
+  <rect width="1200" height="300" fill="url(#dotlink)" />
+  <!-- gradient overlay to keep foreground text readable -->
+  <rect width="1200" height="300" fill="url(#overlay)" />
+
+  <!-- Optional center illustration (light line art) -->
+  <g transform="translate(860,40) scale(0.9)" opacity="0.18">
+    <path d="M40 10 C60 0, 90 0, 110 10" stroke="#8a5a3d" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <circle cx="60" cy="30" r="22" stroke="#8a5a3d" stroke-width="4" fill="none"/>
+    <path d="M60 52 L60 90" stroke="#8a5a3d" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Make file small by avoiding embedded fonts/large text -->
 </svg>
