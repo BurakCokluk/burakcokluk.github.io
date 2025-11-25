@@ -51,8 +51,13 @@ TradeInsight AI is a sophisticated trading analysis platform that combines machi
 - 99.9% uptime SLA
 
 ### Links
-- GitHub: [TradeInsight AI](https://github.com/burakcokluk/tradeinsight-ai)
-- Documentation: [Wiki](https://github.com/burakcokluk/tradeinsight-ai/wiki)
+
+<div style="display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; margin:2.5rem 0;">
+  <a href="https://github.com/burakcokluk/tradeinsight-ai" class="project-link" target="_blank" rel="noopener">GitHub Repo</a>
+  <a href="https://github.com/burakcokluk/tradeinsight-ai/wiki" class="project-link" target="_blank" rel="noopener">Wiki & Docs</a>
+</div>
 
 ---
-*Built with passion for quantitative trading and modern MLOps practices.*
+<div style="text-align:center; color:var(--text-light); font-size:1.05rem; margin-top:2rem;">
+  <em>Built with passion for quantitative trading and modern MLOps practices.</em>
+</div>

@@ -38,7 +38,7 @@ paginate_path: "/blog/page:num/"
 collections:
   pages:
     output: true
-    permalink: /:name/
+    permalink: /:name/index.html
   projects:
     output: true
     permalink: /projects/:name/
@@ -65,6 +65,10 @@ exclude:
   - .jekyll-cache
   - .sass-cache/
   - .DS_Store
+
+# Include hidden directories that should be copied to _site
+include:
+  - .well-known
 
 keep_files:
   - .git

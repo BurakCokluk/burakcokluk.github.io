@@ -1,0 +1,15 @@
+<div class="skills-grid">
+  {% assign skills = site.data.skills | default: page.skills %}
+  {% for skill in skills %}
+    <div class="skill-card" title="{{ skill.name }}">
+      <div class="skill-icon">
+        {% if skill.icon %}
+          <img src="{{ skill.icon }}" alt="{{ skill.name }} icon" loading="lazy" />
+        {% else %}
+          <span class="skill-icon-fallback">🔧</span>
+        {% endif %}
+      </div>
+      <div class="skill-name">{{ skill.name }}</div>
+    </div>
+  {% endfor %}
+</div>

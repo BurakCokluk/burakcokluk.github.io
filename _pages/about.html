@@ -1,0 +1,55 @@
+---
+layout: page
+title: About Me
+permalink: /about/
+nav: true
+nav_order: 1
+---
+
+<!-- Hero Section -->
+<section class="about-hero" style="position:relative; width:100%; min-height:340px; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg,#0D1117 0%,#161B22 100%); overflow:hidden;">
+  <div style="position:absolute; left:0; top:0; width:100%; height:100%; z-index:0;">
+    <img src="/assets/img/node-cluster-bg.svg" alt="Node Cluster Background" style="width:100%; height:100%; object-fit:cover; opacity:0.10; pointer-events:none;" />
+  </div>
+  <div style="display:flex; align-items:center; justify-content:space-between; width:100%; max-width:1200px; z-index:1; padding:48px 32px;">
+    <div style="flex:1; min-width:260px;">
+      <h1 style="font-size:clamp(2.2rem,5vw,3rem); color:#fff; font-weight:800; margin-bottom:1.2rem; letter-spacing:2px;">Hi, I’m Burak Çokluk<br><span style="font-size:1.3rem; font-weight:500; color:#b3c2f7;">Building reliable systems.<br>Automating everything.</span></h1>
+      <div style="font-size:1.15rem; color:#a0aec0; font-weight:500; margin-bottom:0.5rem;">DevOps • Platform Engineering • Distributed Systems</div>
+    </div>
+    <div style="flex:0 0 160px; display:flex; align-items:center; justify-content:center;">
+      <img src="/assets/img/robot-waving.svg" alt="Waving Robot" style="width:120px; height:120px;" />
+    </div>
+  </div>
+</section>
+
+<!-- About Layout -->
+<section class="about-layout" style="display:flex; flex-wrap:wrap; gap:48px; align-items:flex-start; justify-content:center; padding:56px 0 0 0;">
+  <div style="flex:0 0 180px; display:flex; align-items:center; justify-content:center;">
+    <img src="/assets/img/node-cluster-bg.svg" alt="Minimal Node Cluster" style="width:140px; height:80px; opacity:0.18;" />
+  </div>
+  <div style="flex:1; min-width:260px; max-width:420px;">
+    <div class="about-summary" style="font-size:1.15rem; color:var(--text-light); margin-bottom:2rem;">
+      <strong>System & Network Engineer</strong> with a passion for automation, observability, and building scalable platforms. Experienced in enterprise infrastructure, monitoring, and secure system design.
+    </div>
+    <div class="about-bio" style="font-size:1.05rem; color:var(--text-medium); line-height:1.7;">
+      My journey started in Electrical & Electronics Engineering, working in energy and control-system companies. Today, I architect and manage multi-site VMware clusters, high-availability Windows/Linux systems, centralized monitoring (Zabbix, Grafana, ELK), and secure network environments. I enjoy designing systems that are reliable, measurable, and future-proof.
+    </div>
+  </div>
+</section>
+
+<!-- Skills Grid -->
+<section style="padding:56px 0 0 0;">
+  <h2 style="text-align:center; color:var(--primary-color); font-size:clamp(1.5rem,3vw,2rem); font-weight:700; letter-spacing:2px; margin-bottom:2.5rem;">Core Skills</h2>
+  {% include ui/skills-grid.html %}
+</section>
+
+<!-- CTA Block -->
+<section class="about-cta" style="margin:64px auto 0 auto; max-width:700px; background:rgba(255,255,255,0.07); border-radius:24px; padding:40px 32px; text-align:center; box-shadow:0 8px 32px rgba(102,126,234,0.10);">
+  <h3 style="font-size:1.35rem; color:var(--primary-color); font-weight:700; margin-bottom:1rem; letter-spacing:2px;">Let’s build scalable systems together.</h3>
+  <p style="font-size:1.08rem; color:var(--text-light); margin-bottom:2rem;">Available for collaborations in DevOps, AI Ops, Fintech and Distributed Systems.</p>
+  <div style="display:flex; flex-wrap:wrap; gap:1.2rem; justify-content:center;">
+    <a href="/contact/" class="cta-button" style="min-width:140px;">Contact Me</a>
+    <a href="https://github.com/burakcokluk" class="cta-button" target="_blank" rel="noopener" style="min-width:140px;">GitHub</a>
+    <a href="https://linkedin.com/in/burakcokluk" class="cta-button" target="_blank" rel="noopener" style="min-width:140px;">LinkedIn</a>
+  </div>
+</section>

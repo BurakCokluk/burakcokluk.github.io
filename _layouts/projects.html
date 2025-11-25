@@ -7,17 +7,37 @@
     {% include header.html %}
     <main>
       <div class="page-content">
-        <h1>Projects</h1>
+          <div class="page-header" style="text-align:center; margin-bottom:2.5rem;">
+            <h1 class="main-title" style="color:var(--primary-color); font-size:clamp(2rem,5vw,2.5rem); font-weight:800; margin-bottom:1rem; text-shadow:0 2px 12px rgba(102,126,234,0.18);">Projects</h1>
+            <p class="page-subtitle" style="color:var(--text-light); font-size:1.15rem;">Explore my portfolio of AI, infrastructure, Web3, and full-stack development projects</p>
+          </div>
         {% if site.projects %}
           <div class="projects-grid">
             {% for project in site.projects %}
               <div class="project-card">
-                <h3><a href="{{ project.url }}">{{ project.title }}</a></h3>
-                {% if project.category %}
-                  <p class="project-category">{{ project.category }}</p>
+                {% if project.img %}
+                  <div class="project-image">
+                    <img src="{{ project.img }}" alt="{{ project.title }}" loading="lazy">
+                  </div>
                 {% endif %}
-                <p>{{ project.excerpt }}</p>
-                <a href="{{ project.url }}">View project</a>
+                <div class="project-content">
+                  <h3 class="project-title"><a href="{{ project.url }}">{{ project.title }}</a></h3>
+                  {% if project.category %}
+                    <span class="project-category">{{ project.category }}</span>
+                  {% endif %}
+                  <p class="project-description">{{ project.description | default: project.excerpt }}</p>
+                  {% if project.tags %}
+                    <div class="project-tags">
+                      {% for tag in project.tags limit:3 %}
+                        <span class="tag">{{ tag }}</span>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                  <a href="{{ project.url }}" class="project-link">View Details →</a>
+                    {% if project.github %}
+                    <a href="{{ project.github }}" class="project-link" target="_blank" rel="noopener" style="margin-left:0.5rem;">GitHub</a>
+                    {% endif %}
+                </div>
               </div>
             {% endfor %}
           </div>

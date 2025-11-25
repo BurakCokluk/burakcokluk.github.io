@@ -1,0 +1,12 @@
+- name: VMware
+  icon: /assets/img/skills/vmware.svg
+- name: Linux
+  icon: /assets/img/skills/linux.svg
+- name: Windows
+  icon: /assets/img/skills/windows.svg
+- name: Grafana
+  icon: /assets/img/skills/grafana.svg
+- name: Zabbix
+  icon: /assets/img/skills/zabbix.svg
+- name: SolarWinds
+  icon: /assets/img/skills/solarwinds.svg

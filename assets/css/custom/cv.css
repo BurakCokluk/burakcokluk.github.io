@@ -1,0 +1,59 @@
+/* CV / Resume page */
+.cv-section {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 16px;
+  border-left: 5px solid var(--primary-color);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cv-section:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.cv-section h2 {
+  margin-top: 0;
+  color: var(--primary-color);
+  text-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+}
+
+.cv-section h4 {
+  margin-top: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.cv-section dl {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 0.75rem 1.5rem;
+}
+
+.cv-section dt {
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.cv-section dd {
+  margin: 0;
+  color: var(--text-light);
+}
+
+.cv-section ul {
+  list-style-position: inside;
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.cv-section li {
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+}
+
+.cv-section li::marker {
+  color: var(--primary-color);
+}

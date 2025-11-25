@@ -5,8 +5,8 @@
 
 // Detect dark mode
 const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-const particleColor = isDarkMode ? '#60A5FA' : '#2563EB'; // Lighter blue for dark mode
-const particleOpacity = isDarkMode ? 0.5 : 0.4;
+const particleColor = isDarkMode ? '#ffffff' : '#ffffff'; // White particles for colorful backgrounds
+const particleOpacity = isDarkMode ? 0.7 : 0.5;
 
 // Responsive particle count - reduce on mobile for performance
 const isMobile = window.innerWidth < 768;

@@ -1,179 +1,130 @@
 # Burak Çokluk's Portfolio
 
-A modern, professional portfolio website built with Jekyll and the al-folio theme.
+Professional portfolio site built with Jekyll and a customized al-folio theme, showcasing infrastructure, DevOps, AI, and Web3 work.
 
-## Features
+## Highlights
 
-- **8 Professional Pages**: About, Projects, Blog, Skills, Tools, AI Projects, Resume, Contact
-- **10 Project Showcases**: Detailed case studies with technologies, results, and metrics
-- **Responsive Design**: Mobile-friendly interface with dark mode support
-- **Complete CV**: Structured YAML-based resume data
-- **Modern Styling**: Professional typography, color scheme, and components
-- **SEO Optimized**: Proper metadata and structured data
+- **Eight Sectioned Pages**: About, Projects, Blog, Skills, Tools, AI Projects, Resume, Contact
+- **Project Case Studies**: Ten detailed project write-ups with technology stacks and outcomes
+- **Radial Quick Launcher**: Floating JS-driven radial menu with ESC/outside click dismissal
+- **Responsive UI**: Sticky glassmorphism navbar, dark mode support, mobile-friendly layouts
+- **Structured Data**: Resume powered by `_data/cv.yml`, skills grid sourced from `_data/skills.yml`
+- **Performance Ready**: Minimal dependencies, optimized SVG icons, SEO metadata
 
-## Project Structure
+## Repository Layout
 
 ```
 portfolyo/
-├── _config.yml           # Jekyll configuration
-├── _pages/               # Main navigation pages (About, Projects, etc.)
-├── _projects/            # 10 detailed project cards
+├── _config.yml            # Global Jekyll + theme configuration
+├── _pages/                # Top-level navigation pages
+├── _projects/             # Project case study markdown files (01-10)
 ├── _data/
-│   └── cv.yml           # CV resume data
+│   ├── cv.yml             # Resume sections and entries
+│   └── skills.yml         # Skill grid entries and icon paths
 ├── _includes/
-│   └── header.html      # Navigation header
+│   ├── header.html        # Primary navbar with social links
+│   ├── footer.html        # Footer markup
+│   └── ui/
+│       ├── radial-menu.html   # Floating radial quick navigation
+│       └── skills-grid.html   # Reusable skills grid partial
+├── _layouts/              # Page, projects, blog, CV templates
 ├── assets/
-│   ├── css/
-│   │   └── custom.css   # Professional styling
-│   └── img/
-│       ├── logo.png     # Navbar logo
-│       ├── header-banner.svg
-│       └── projects/    # Project placeholder images
-└── Gemfile              # Ruby dependencies
+│   ├── css/custom.css     # Custom theme overrides and components
+│   ├── img/
+│   │   ├── logo.svg/png   # Brand assets
+│   │   └── skills/        # Inline-ready SVG skill icons
+│   └── js/                # Navbar scroll + visual enhancements
+├── Gemfile                # Ruby dependencies
+└── README.md
 ```
 
-## Pages
+## Content Overview
 
-### Navigation Pages (_pages/)
-- **about.md** - Professional introduction and background
-- **projects.md** - Project listing index
-- **blog.md** - Technical blog index
-- **skills.md** - Detailed technical skills
-- **tools.md** - Tools and technologies used
-- **ai-projects.md** - AI-powered projects
-- **resume.md** - CV display page
-- **contact.md** - Contact information
+- `_pages/*.md`: Individual page content with YAML front matter controlling permalinks and navigation order
+- `_projects/*.md`: Numbered project entries controlling display order and generated slugs
+- `_data/cv.yml`: Nested sections for the resume page, supporting text, list, and map formats
+- `_data/skills.yml`: Source list for the skills grid include; each entry supplies a label and icon path
+- `_includes/ui/skills-grid.html`: Renders skills as cards with inline SVGs or fallback emoji
+- `_includes/ui/radial-menu.html`: Menu items defined via a JavaScript array for quick edits
 
-### Project Cards (_projects/)
-1. **TradeInsight AI** - ML-powered trading signals platform
-2. **HabitCoach** - AI habit tracking with behavioral science
-3. **IMA Coach** - Conversational mental health AI
-4. **AppMan** - Enterprise deployment automation
-5. **Observability Stack** - Zabbix + Grafana monitoring
-6. **Ripple Platform** - XRPL-based payment system
-7. **Solana dApp** - Token launchpad on Solana
-8. **Selenium Analyzer** - E-commerce web scraping
-9. **FastAPI E-Commerce** - Full-stack backend
-10. **Web3 Infrastructure** - Multi-chain token toolkit
+## Radial Menu Configuration
 
-## Setup & Installation
+- Update the `menuItems` array in `_includes/ui/radial-menu.html` to change labels, destinations, or add external links
+- Icon markup lives in the `iconMap` registry—drop in custom `<svg>` snippets to align branding
+- Menu auto-closes when a link is clicked, focus leaves the menu, or the `Escape` key is pressed
+- Positioning recalculates on window resize; radius and transition timing can be tuned in the same file or via `custom.css`
 
-### Prerequisites
-- Ruby (3.0+)
+## Skills Grid Customization
+
+- Edit `_data/skills.yml` to add, remove, or reorder skill cards (SVG paths are relative to the site root)
+- SVG files live in `assets/img/skills/`; ensure they include proper namespaces for inline usage
+- The include `{% include ui/skills-grid.html %}` can be dropped into any page section for consistent presentation
+
+## Local Development
+
+### Requirements
+
+- Ruby 3.0+
 - Bundler
-- Jekyll (4.3+)
+- Jekyll 4.3+
 
-### Local Development
+### Workflow
 
 ```bash
-# Navigate to project
-cd portfolyo
-
 # Install dependencies
 bundle install
 
-# Serve locally
-bundle exec jekyll serve
+# Serve with live reload (default: http://localhost:4000)
+bundle exec jekyll serve --host 127.0.0.1 --port 4000
 
-# Site will be available at http://localhost:4000
-```
-
-### Build for Production
-
-```bash
-# Generate static site
+# Production build
 bundle exec jekyll build
-
-# Output in _site/ directory
 ```
 
-## Customization
+Generated HTML outputs to `_site/`; the directory is git-ignored and rebuilt for each serve/build command.
 
-### Update Information
-- Edit `_config.yml` to change site title, author, social links
-- Update `_data/cv.yml` with your CV information
-- Modify individual page files in `_pages/` for content
+## Theme & Styling Notes
 
-### Styling
-- Color variables defined in `assets/css/custom.css`
-- Modify `:root` CSS variables for theme colors
-- Update `_includes/header.html` for navigation changes
+- Core overrides live in `assets/css/custom.css`
+- Palette derives from CSS variables: `--primary-color: #667EEA`, `--secondary-color: #764BA2`, `--accent-color: #4FACFE`
+- Navbar and radial menu use glassmorphism-inspired backgrounds with blur filters
+- Dark mode is toggled at the theme level via `enable_darkmode: true` in `_config.yml`
 
-### Add Content
-- New pages: Create `.md` files in `_pages/` with proper YAML front-matter
-- New projects: Create `.md` files in `_projects/` with metadata
-- Blog posts: Create `.md` files in `_posts/` with date prefix
+## Adding Content
 
-## Technology Stack
-
-- **Static Site Generator**: Jekyll 4.3+
-- **Theme**: al-folio compatible
-- **Styling**: CSS3 with responsive design
-- **Fonts**: System fonts (Segoe UI, Arial)
-- **Icons**: FontAwesome
-- **Deployment**: GitHub Pages ready
-
-## Color Scheme
-
-- **Primary Blue**: #0066cc
-- **Secondary Cyan**: #00a3e0
-- **Accent Orange**: #ff6b35
-- **Dark Text**: #1a1a1a
-- **Light Background**: #f8f9fa
-
-## Browser Support
-
-- Chrome 90+
-- Firefox 88+
-- Safari 14+
-- Edge 90+
-- Mobile browsers (iOS Safari, Chrome Mobile)
+- **Pages**: Create new markdown files under `_pages/` with the `layout` and `permalink` defined in front matter
+- **Projects**: Copy an existing `_projects/` file, increment the numeric prefix to control ordering, and adjust metadata
+- **Resume**: Follow the structured schema in `_data/cv.yml` (supports nested bullet lists and map layouts)
+- **Blog Posts**: Add dated markdown files to `_posts/` (standard Jekyll convention) if blogging is enabled
 
 ## Deployment
 
-### GitHub Pages
-1. Push repository to GitHub
-2. Enable Pages in repository settings
-3. Select main/master branch as source
-4. Site will be live at `https://yourusername.github.io/portfolyo`
+- Designed for GitHub Pages—push to `main` (or configured branch) and enable Pages in repository settings
+- For custom domains, provide a `CNAME` file and update DNS A/AAAA records to GitHub Pages endpoints
+- Alternative hosts (Netlify, Vercel, AWS Amplify) can run `jekyll build` and publish the `_site/` directory
 
-### Custom Domain
-1. Add `CNAME` file to root with your domain
-2. Update DNS records to point to GitHub Pages
-3. Enable HTTPS in repository settings
+## Tooling Stack
 
-### Other Platforms
-- Netlify, Vercel, and AWS Amplify are also supported
-- Build command: `jekyll build`
-- Publish directory: `_site/`
+- **Static Site Generator**: Jekyll 4.3+
+- **Theme Base**: al-folio with bespoke overrides
+- **Enhancements**: Vanilla JavaScript (radial menu, navbar scroll effects)
+- **Icons**: Font Awesome for social links, inline SVGs for skills and menu glyphs
+- **Deployment Target**: GitHub Pages-ready out of the box
 
-## Performance Optimizations
+## Maintenance Checklist
 
-- Minimal CSS (20KB uncompressed)
-- Image optimization with placeholder SVGs
-- No JavaScript framework dependencies
-- Fast page load times
-- Core Web Vitals optimized
-
-## Maintenance
-
-- Update Jekyll regularly: `bundle update jekyll`
-- Check for plugin updates: `bundle update`
-- Monitor 404s and broken links
-- Keep content fresh with regular blog posts
-- Test responsive design on multiple devices
-
-## License
-
-This portfolio structure is inspired by al-folio theme. Customize freely for your use.
+- `bundle update` periodically to receive security and plugin updates
+- Rebuild locally before deploying to confirm no Liquid or Markdown errors
+- Validate responsive behaviour (desktop, tablet, mobile) after major layout changes
+- Monitor SEO outputs (`_site/sitemap.xml`, meta tags via `jekyll-seo-tag`)
 
 ## Contact
 
 - Email: burak@example.com
-- GitHub: github.com/burakcokluk
-- LinkedIn: linkedin.com/in/burakcokluk
+- GitHub: https://github.com/burakcokluk
+- LinkedIn: https://linkedin.com/in/burakcokluk
 
 ---
 
-**Last Updated**: November 21, 2025
-**Status**: Production Ready ✓
+**Last Updated**: November 26, 2025  
+**Status**: Production ready ✓

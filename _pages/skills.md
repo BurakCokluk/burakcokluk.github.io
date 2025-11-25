@@ -6,42 +6,11 @@ nav: true
 nav_order: 5
 ---
 
-# Technical Skills
+<section class="skills-intro">
+	<h1>Technical Skills</h1>
+	<p>Infrastructure, monitoring, automation, and tooling I rely on to ship resilient systems and rapid iterations.</p>
+</section>
 
-Infrastructure & Systems
-- VMware vSphere, ESXi, HA/DR architectures
-- Windows Server, Linux (Ubuntu, CentOS, Debian)
-- Active Directory, GPO, DNS, DHCP
-- High-availability clusters
-- Backup & replication strategies
-
-Monitoring & Observability
-- Zabbix (advanced templates, triggers, dashboards)
-- Grafana, Prometheus exporters
-- ELK Stack (Logstash, Kibana)
-- QRadar SIEM
-- SolarWinds Network Monitoring
-
-Networking
-- VLAN, OSPF, BGP
-- Firewalls: Fortinet, Cisco
-- VPN, IPSec, SSL-VPN
-- Load balancing, reverse proxy
-
-DevOps & Automation
-- Docker, Docker Compose
-- GitHub Actions CI/CD
-- Python automation scripts
-- Shell scripting
-- Internal deployment automation (AppMan)
-
-Software & Tools
-- Visual Studio Code, PyCharm
-- Git, GitHub
-- Terraform (beginner)
-- Node.js, FastAPI (intermediate)
-
-Cloud & Virtualization
-- VMware vSphere
-- Yandex Cloud test environments
-- Remote access systems
+<section class="skills-overview">
+	{% include ui/skills-grid.html %}
+</section>

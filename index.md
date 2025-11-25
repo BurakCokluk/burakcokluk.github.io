@@ -84,14 +84,40 @@ permalink: /
 
 ---
 
-## Featured Projects
-
-Explore my work in:
-- **AI & Trading** — Machine learning and financial systems
-- **Infrastructure** — Zabbix, Grafana, VMware monitoring
-- **Web3 & Blockchain** — Smart contracts, decentralized apps
-- **DevOps** — Deployment automation, CI/CD pipelines
-- **Full-Stack** — E-commerce platforms, backend systems
+<section class="featured-section">
+  <h2>Featured Projects</h2>
+  <p class="section-intro">Explore my work across diverse technology domains:</p>
+  <div class="featured-grid">
+    <div class="featured-item">
+      <span class="featured-icon">🤖</span>
+      <h3>AI & Trading</h3>
+      <p>Machine learning and financial systems</p>
+    </div>
+    <div class="featured-item">
+      <span class="featured-icon">🏗️</span>
+      <h3>Infrastructure</h3>
+      <p>Zabbix, Grafana, VMware monitoring</p>
+    </div>
+    <div class="featured-item">
+      <span class="featured-icon">🔗</span>
+      <h3>Web3 & Blockchain</h3>
+      <p>Smart contracts, decentralized apps</p>
+    </div>
+    <div class="featured-item">
+      <span class="featured-icon">⚙️</span>
+      <h3>DevOps</h3>
+      <p>Deployment automation, CI/CD pipelines</p>
+    </div>
+    <div class="featured-item">
+      <span class="featured-icon">💻</span>
+      <h3>Full-Stack</h3>
+      <p>E-commerce platforms, backend systems</p>
+    </div>
+  </div>
+  <div class="text-center" style="margin-top: 2rem;">
+    <a href="/projects/" class="cta-button">View All Projects</a>
+  </div>
+</section>
 
 ---
 

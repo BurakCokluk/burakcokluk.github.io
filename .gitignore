@@ -1,40 +1,50 @@
-# Jekyll
+# 1. Jekyll Gerekli Dışlamalar 💎
+# _site ve cache zaten var. Ek olarak RSS ve SEO dosyaları.
 _site/
 .jekyll-cache/
 .jekyll-metadata
 Gemfile.lock
+# Aşağıdaki iki dosya genellikle Jekyll SEO eklentisi tarafından üretilir.
+feed.xml
+sitemap.xml
 
-# Ruby
+# 2. Ruby ve Bundler Bağımlılıkları
+# Bu kısım doğru ve gerekli.
 vendor/
 .bundle/
 *.gem
 
-# Editor
+# 3. Editor (VS Code, vb.)
+# Bu kısım iyi ve kapsayıcı.
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
-# OS
+# 4. İşletim Sistemi (OS)
+# Bu kısım doğru.
 .DS_Store
 Thumbs.db
 
-# Environment
+# 5. Ortam Değişkenleri
+# Bu kısım doğru ve kritik.
 .env
 .env.local
 .env.*.local
 
-# Build
-dist/
-build/
-
-# Dependencies
-node_modules/
-package-lock.json
-yarn.lock
-
-# Temporary
+# 6. İnşa Çıktıları ve Geçici Dosyalar (Build & Temporary)
+# Dist/build satırları statik site için genellikle gereksiz ama zararı yok.
+# Log ve tmp/temp doğru ve gerekli.
+# dist/
+# build/  # (Jekyll'de _site/ kullandığımız için bunlar genellikle gereksiz.)
 tmp/
 temp/
 *.log
+
+# 7. Node/NPM Bağımlılıkları (Gözden Geçirilebilir)
+# Jekyll projesinde SASS/JS için sadece Bundler kullanıyorsanız bu kısım gereksizdir.
+# Node kullanıyorsanız (örneğin Prettier çalıştırmak için) kalsın.
+# node_modules/
+# package-lock.json
+# yarn.lock

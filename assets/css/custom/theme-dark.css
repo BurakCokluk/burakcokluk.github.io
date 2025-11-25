@@ -1,0 +1,106 @@
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-dark: #f1f5f9;
+    --text-medium: #e2e8f0;
+    --text-light: #cbd5e1;
+    --bg-light: #1e293b;
+    --border-color: rgba(79, 172, 254, 0.3);
+    --card-bg: rgba(30, 41, 59, 0.9);
+  }
+
+  html,
+  body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  }
+
+  .navbar {
+    background: rgba(15, 23, 42, 0.85);
+    border-bottom: 1px solid rgba(79, 172, 254, 0.2);
+  }
+
+  .navbar.navbar-scrolled {
+    background: rgba(15, 23, 42, 0.95);
+  }
+
+  .hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 100%);
+  }
+
+  .hero-section::before {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(30, 41, 59, 0.75) 100%);
+  }
+
+  .hero-copy h1,
+  .hero-copy h3,
+  .hero-lead {
+    color: #f1f5f9;
+    text-shadow: 0 4px 20px rgba(79, 172, 254, 0.5);
+  }
+
+  .page-content {
+    background: transparent;
+    border: none;
+  }
+
+  .project-card {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(15, 23, 42, 0.95) 100%);
+    border: 1px solid rgba(79, 172, 254, 0.2);
+  }
+
+  .project-card:hover {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 1) 0%, rgba(15, 23, 42, 1) 100%);
+    border-color: #4facfe;
+  }
+
+  .contact-form {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.9) 100%);
+    border: 1px solid rgba(79, 172, 254, 0.2);
+  }
+
+  .skill-category {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(15, 23, 42, 0.95) 100%);
+    border-left-color: #4facfe;
+  }
+
+  .nav-card {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.85) 0%, rgba(15, 23, 42, 0.8) 100%);
+    border: 2px solid rgba(79, 172, 254, 0.2);
+  }
+
+  .nav-card:hover {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(15, 23, 42, 0.95) 100%);
+    border-color: #4facfe;
+  }
+
+  .cv-section {
+    background: rgba(26, 26, 46, 0.8);
+    border-left-color: #60a5fa;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    background: rgba(15, 23, 42, 0.8);
+    border-color: rgba(79, 172, 254, 0.3);
+    color: #f1f5f9;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    background: rgba(15, 23, 42, 0.9);
+    border-color: #4facfe;
+  }
+
+  .blog-card {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(15, 23, 42, 0.95) 100%);
+    border: 1px solid rgba(79, 172, 254, 0.2);
+  }
+
+  .blog-card:hover {
+    border-color: #4facfe;
+  }
+
+  footer {
+    background: linear-gradient(135deg, #0b1220 0%, #050a16 100%);
+  }
+}
